@@ -11,7 +11,7 @@ Key Features:
 2. Personalized Portfolio Management: Create and manage your crypto portfolio with ease. Add coins to your portfolio to track their performance, view your gains/losses, and analyze your investment growth over time.
 3. Comprehensive Coin Details: Dive deep into each cryptocurrency with detailed information, including market cap, trading volume, historical price data, and more. Make informed decisions based on robust data analysis and market trends.
 
-# Description (RU)
+# Описание (RU)
 CryptoMonitoring позволяет легко ориентироваться в увлекательном мире криптовалют.
 Независимо от того, являетесь ли вы страстным инвестором или наблюдателем, это приложение станет вашим основным инструментом для отслеживания цен на криптовалюты и управления вашими инвестициями.
 
