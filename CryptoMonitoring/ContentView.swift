@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  CryptoMonitoring
-//
-//  Created by Ilya Ovchinnikov on 25.10.2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
