@@ -12,7 +12,7 @@ Key Features:
 3. Comprehensive Coin Details: Dive deep into each cryptocurrency with detailed information, including market cap, trading volume, historical price data, and more. Make informed decisions based on robust data analysis and market trends.
 
 # Description (RU)
-CryptoTrack позволяет легко ориентироваться в увлекательном мире криптовалют.
+CryptoMonitoring позволяет легко ориентироваться в увлекательном мире криптовалют.
 Независимо от того, являетесь ли вы страстным инвестором или наблюдателем, это приложение станет вашим основным инструментом для отслеживания цен на криптовалюты и управления вашими инвестициями.
 
 Основные функции:
