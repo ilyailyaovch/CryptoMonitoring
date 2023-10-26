@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct CryptoMonitoringApp: App {
+
+    @StateObject private var vm = HomeViewModel()
+
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 HomeView().toolbar(.hidden)
-            }
+            }.environmentObject(vm)
         }
     }
 }
