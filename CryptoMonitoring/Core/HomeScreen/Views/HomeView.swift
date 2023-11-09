@@ -8,12 +8,12 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             // Background
-            Color.theme.background
-                .ignoresSafeArea()
+            Color.theme.background.ignoresSafeArea()
             // Content
             VStack {
-                homeHeader
-                columnTitles
+                HomeHeader
+                SearchBarView(searchText: $vm.searchText)
+                ColumnTitles
                 switch showPortfolio {
                 case false: allCoinsList.transition(.move(edge: .leading))
                 case true: portfolioCoinsList.transition(.move(edge: .trailing))
@@ -25,7 +25,7 @@ struct HomeView: View {
 }
 
 extension HomeView {
-    private var homeHeader: some View {
+    private var HomeHeader: some View {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none)
@@ -40,13 +40,11 @@ extension HomeView {
             CircleButtonView(iconName: "chevron.right")
                 .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
                 .onTapGesture {
-                    withAnimation(.spring) {
-                        showPortfolio.toggle()
-                    }
+                    withAnimation(.spring) { showPortfolio.toggle() }
                 }
         }.padding(.horizontal)
     }
-    private var columnTitles: some View {
+    private var ColumnTitles: some View {
         HStack {
             Text("Coin")
             Spacer()

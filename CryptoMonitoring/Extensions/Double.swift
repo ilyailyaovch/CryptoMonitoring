@@ -3,6 +3,7 @@ import Foundation
 extension Double {
 
     // MARK: - currencyFormatter2
+    
     /// Converts a Double into a Currency with 2 decimal places
     /// ```
     /// Convert 1234.56 to $1,234.56
@@ -29,6 +30,7 @@ extension Double {
     }
 
     // MARK: - currencyFormatter6
+
     /// Converts a Double into a Currency with 2-6 decimal places
     /// ```
     /// Convert 1234.56 to $1,234.56
@@ -59,6 +61,7 @@ extension Double {
     }
 
     // MARK: - Double -> String
+
     /// Converts a Double into string representation
     /// ```
     /// Convert 1.2345 to "1.23"
