@@ -12,6 +12,7 @@ struct HomeView: View {
             // Content
             VStack {
                 HomeHeader
+                HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
                 ColumnTitles
                 switch showPortfolio {
@@ -39,9 +40,7 @@ extension HomeView {
             Spacer()
             CircleButtonView(iconName: "chevron.right")
                 .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
-                .onTapGesture {
-                    withAnimation(.spring) { showPortfolio.toggle() }
-                }
+                .onTapGesture { withAnimation(.spring) { showPortfolio.toggle() }}
         }.padding(.horizontal)
     }
     private var ColumnTitles: some View {
