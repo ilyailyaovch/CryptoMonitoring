@@ -34,11 +34,9 @@ class CoinImageService {
             .tryMap({ (data) -> UIImage? in
                 return UIImage(data: data)
             })
-            .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedImage) in
-                guard
-                    let self = self,
-                    let downloadedImage = returnedImage
-                else { return }
+            .sink(receiveCompletion: NetworkingManager.handleCompletion,
+                  receiveValue: { [weak self] (returnedImage) in
+                guard let self = self, let downloadedImage = returnedImage else { return }
                 self.image = returnedImage
                 self.imageSubscription?.cancel()
                 self.fileManager.saveImage(image: downloadedImage, imageName: self.imageName, folderName: self.folderName)

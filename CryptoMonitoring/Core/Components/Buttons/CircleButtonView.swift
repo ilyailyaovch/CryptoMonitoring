@@ -22,10 +22,10 @@ struct CircleButtonView: View {
 
 #Preview {
     Group {
-        CircleButtonView(iconName: "heart.fill")
+        CircleButtonView(iconName: "info")
             .previewLayout(.sizeThatFits)
         .padding()
-        CircleButtonView(iconName: "heart.fill")
+        CircleButtonView(iconName: "plus")
             .previewLayout(.sizeThatFits)
             .colorScheme(.dark)
     }

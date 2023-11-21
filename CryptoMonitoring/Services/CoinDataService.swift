@@ -22,6 +22,9 @@ class CoinDataService {
                 self?.allCoins = returnedCoins
                 self?.coinSubscription?.cancel()
             })
+    }
+}
+
 //            .sink { (completion) in
 //                switch completion {
 //                case .finished:
@@ -33,6 +36,3 @@ class CoinDataService {
 //                self?.allCoins = returnedCoins
 //                self?.coinSubscription?.cancel()
 //            }
-    }
-
-}
