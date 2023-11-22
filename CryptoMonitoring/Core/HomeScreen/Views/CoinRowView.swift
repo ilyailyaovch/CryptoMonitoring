@@ -13,7 +13,9 @@ struct CoinRowView: View {
                 midColumn
             }
             rightColumn
-        }.font(.subheadline)
+        }
+        .font(.subheadline)
+        .padding(.vertical, 1)
     }
 }
 
