@@ -8,8 +8,7 @@ struct XMarkButton: View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
         },label: {
-            Image(systemName: "xmark")
-                .font(.headline)
+            Image(systemName: "xmark").font(.headline)
         })
     }
 }
