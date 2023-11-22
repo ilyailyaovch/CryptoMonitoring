@@ -22,7 +22,7 @@ struct HomeView: View {
                 }
                 Spacer(minLength: 0)
             }
-        }.sheet(isPresented: $showPortfolioView,content: { PortfolioView().environmentObject(vm) })
+        }.sheet(isPresented: $showPortfolioView, content: { PortfolioView().environmentObject(vm) })
     }
 }
 
@@ -53,7 +53,14 @@ extension HomeView {
                 Text("Holdings")
             }
             Text("Price")
-                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+                .frame(width: UIScreen.main.bounds.width / 3.5,alignment: .trailing)
+            Button(action: {
+                withAnimation(.linear(duration: 1.5)) {
+                    vm.updateCoinsData()
+                }
+            },label: {
+                Image(systemName: "goforward")
+            }).rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundColor(.theme.secondaryText)
@@ -67,6 +74,7 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+        .refreshable { vm.updateCoinsData() }
     }
     private var portfolioCoinsList: some View {
         List {
@@ -76,6 +84,7 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+        .refreshable { vm.updateCoinsData() }
     }
 }
 

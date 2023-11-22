@@ -10,7 +10,7 @@ class CoinDataService {
         getCoins()
     }
 
-    private func getCoins() {
+    func getCoins() {
 
         let urlString = ConstantURL.coinDataURL
         guard let url = URL(string: urlString) else { return }

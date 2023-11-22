@@ -10,7 +10,7 @@ class MarketDataService {
         getMarketData()
     }
 
-    private func getMarketData() {
+    func getMarketData() {
 
         let urlString = ConstantURL.marketDataURL
         guard let url = URL(string: urlString) else { return }
