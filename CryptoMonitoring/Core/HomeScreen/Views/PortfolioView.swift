@@ -19,14 +19,14 @@ struct PortfolioView: View {
                 }
             }
             .navigationTitle("Edit Portfolio")
-            .toolbar(content: {
+            .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     XMarkButton()
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     trailingNavBarButton
                 }
-            })
+            }
             .onChange(of: vm.searchText, perform: { value in
                 if value == "" { removeSelectedCoin() }
             })
