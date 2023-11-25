@@ -31,10 +31,10 @@ struct StatisticView: View {
     Group {
         StatisticView(stat: DeveloperPreview.instance.stat1)
             .previewLayout(.sizeThatFits)
-        StatisticView(stat: DeveloperPreview.instance.stat2)
-            .previewLayout(.sizeThatFits)
-        StatisticView(stat: DeveloperPreview.instance.stat3)
-            .previewLayout(.sizeThatFits)
+        // StatisticView(stat: DeveloperPreview.instance.stat2)
+        //    .previewLayout(.sizeThatFits)
+        // StatisticView(stat: DeveloperPreview.instance.stat3)
+        //    .previewLayout(.sizeThatFits)
     }
 
 }

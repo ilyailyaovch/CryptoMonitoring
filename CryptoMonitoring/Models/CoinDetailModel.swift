@@ -129,7 +129,7 @@ struct Links: Codable {
     let subredditURL: String?
 
     enum CodingKeys: String, CodingKey {
-        case homepage
+        case homepage = "homepage"
         case subredditURL = "subreddit_url"
     }
 }

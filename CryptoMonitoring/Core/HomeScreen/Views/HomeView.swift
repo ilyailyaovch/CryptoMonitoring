@@ -5,13 +5,19 @@ struct HomeView: View {
     @EnvironmentObject var vm: HomeViewModel
     @State private var showPortfolio = false
     @State private var showPortfolioView: Bool = false
+    @State private var showSettingsView: Bool = false
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailView: Bool = false
 
     var body: some View {
         ZStack {
             // Background
-            Color.theme.background.ignoresSafeArea()
+            Color.theme.background
+                .ignoresSafeArea()
+                .sheet(
+                    isPresented: $showSettingsView,
+                    content: { SettingsView() }
+                )
             // Content
             VStack {
                 HomeHeader
@@ -24,11 +30,11 @@ struct HomeView: View {
                 }
                 Spacer(minLength: 0)
             }
+            .sheet(
+                isPresented: $showPortfolioView,
+                content: { PortfolioView().environmentObject(vm) }
+            )
         }
-        .sheet(
-            isPresented: $showPortfolioView,
-            content: { PortfolioView().environmentObject(vm) }
-        )
         .background(
             NavigationLink(
                 destination: DetailLoadingView(coin: $selectedCoin),
@@ -44,7 +50,13 @@ extension HomeView {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none)
-                .onTapGesture { if showPortfolio { showPortfolioView.toggle() }}
+                .onTapGesture {
+                    if showPortfolio {
+                        showPortfolioView.toggle()
+                    } else {
+                        showSettingsView.toggle()
+                    }
+                }
                 .background(CircleButtonAnimationView(animate: $showPortfolio))
             Spacer()
             Text(showPortfolio ? "Portfolio" : "Live prices")
@@ -55,7 +67,11 @@ extension HomeView {
             Spacer()
             CircleButtonView(iconName: "chevron.right")
                 .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
-                .onTapGesture { withAnimation(.spring) { showPortfolio.toggle() }}
+                .onTapGesture {
+                    withAnimation(.spring) {
+                        showPortfolio.toggle()
+                    }
+                }
         }.padding(.horizontal)
     }
     private var ColumnTitles: some View {
@@ -117,7 +133,9 @@ extension HomeView {
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
-                    .onTapGesture { segueToDetailView(coin: coin) }
+                    .onTapGesture {
+                        segueToDetailView(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)
