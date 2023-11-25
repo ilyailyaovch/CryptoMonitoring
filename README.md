@@ -21,6 +21,8 @@ CryptoMonitoring позволяет легко ориентироваться в
 3. Подробная информация о монетах: Погрузитесь в каждую криптовалюту благодаря подробной информации, включая рыночную капитализацию, объем торгов, исторические данные о ценах и другое. Принимайте обоснованные решения на основе всестороннего анализа данных и тенденций рынка.
 
 ## Screenshots
-  <img src="./ScreenShots/1.png" width="250">            <img src="./ScreenShots/2.png" width="250">            <img src="./ScreenShots/3.png" width="250">
-  <img src="./ScreenShots/4.png" width="250">            <img src="./ScreenShots/5.png" width="250">            <img src="./ScreenShots/6.png" width="250">
+  <img src="./ScreenShots/1.png" width="260">            <img src="./ScreenShots/2.png" width="260">            <img src="./ScreenShots/3.png" width="260">
+  <img src="./ScreenShots/4.png" width="260">            <img src="./ScreenShots/5.png" width="260">            <img src="./ScreenShots/6.png" width="260">
+  <img src="./ScreenShots/7.png" width="260">            <img src="./ScreenShots/8.png" width="260">            <img src="./ScreenShots/9.png" width="260">
+  <img src="./ScreenShots/10.png" width="260">            <img src="./ScreenShots/11.png" width="260">            <img src="./ScreenShots/12.png" width="260">
 
